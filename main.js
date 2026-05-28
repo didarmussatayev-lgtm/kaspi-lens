@@ -246,8 +246,7 @@
     }
   }
 
-  bindInlineCopy('copySupportTelegramBtn', 'supportTelegramCopied', 'https://t.me/digitalcraftzman');
-  bindInlineCopy('copySupportCardBtn', 'supportCardCopied', '4400430287133273');
+  bindInlineCopy('copySupportCardBtn', 'supportCardCopied', '4400430384496003');
 
   const copyProductLinkBtn = shadow.getElementById('copyProductLinkBtn');
   const productCard = shadow.getElementById('productCard');
