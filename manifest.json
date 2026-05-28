@@ -1,0 +1,31 @@
+{
+   "action": {
+      "default_icon": {
+         "16": "icons/icon16.png",
+         "32": "icons/icon32.png"
+      }
+   },
+   "content_scripts": [ {
+      "js": [ "vendor/jszip.min.js", "vendor/pdf-lib.min.js", "src/i18n.js", "src/storage.js", "src/ads.js", "src/profiles.js", "src/history.js", "src/dom.js", "src/calculator.js", "src/invoices.js", "src/picker.js", "src/ui.js", "src/main.js" ],
+      "matches": [ "https://kaspi.kz/*" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "Калькулятор прибыли и юнит-экономики для селлеров на Kaspi.kz (Unofficial)",
+   "host_permissions": [ "https://kaspi.kz/*", "https://raw.githubusercontent.com/*" ],
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArYn5WLBZikWlAbV5BKYFxep1Zti216KdU30wdQVjHNXyq8oL2gGsQXM1exycc5KlkmlBt1qcV5JtADLaVDzOvTBwmlD/zsXL22iLbwEUelCPwnUDfpe46Tim7vDsM+aXHLU1FHmfA5ZP1FV1Nv2pHunC84YW1Q3FnFB3F5FX3CGCBAN7bplhbj1XaXME1HE3kIzL9qgK8nQSkOFxqiGamEshYycx8nAqNs3nmgeXdQXbTfZHYsBXgBOzu9FpIy+AxBNWfD8cvsbsUPmEQBIFRctKTPG+1bOW4qRKBlStSMNr9XD3eGWemESlkh8K+btePCo9qCpNR+H4W2gQCyNc2wIDAQAB",
+   "manifest_version": 3,
+   "name": "Kaspi Seller Lens (Unofficial) — Калькулятор прибыли и юнит-экономики",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.3",
+   "web_accessible_resources": [ {
+      "matches": [ "https://kaspi.kz/*" ],
+      "resources": [ "styles/styles.css", "data/kaspi-commissions.json", "data/ads.json", "vendor/jszip.min.js", "vendor/pdf-lib.min.js" ]
+   } ]
+}
