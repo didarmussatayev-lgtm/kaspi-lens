@@ -1,0 +1,28 @@
+{
+  "source": "https://guide.kaspi.kz/partner/ru/shop/conditions/commissions",
+  "updated": "2026-05-20",
+  "defaultPolicy": "useMaxForRanges",
+  "categories": [
+    { "name": "Автотовары", "min": 10.9, "max": 10.9, "default": 10.9 },
+    { "name": "Аксессуары", "min": 10.9, "max": 13.5, "default": 13.5 },
+    { "name": "Аптека", "min": 6.4, "max": 10.9, "default": 10.9 },
+    { "name": "Бытовая техника", "min": 10.9, "max": 10.9, "default": 10.9 },
+    { "name": "Детские товары", "min": 10.9, "max": 10.9, "default": 10.9 },
+    { "name": "Досуг, книги", "min": 10.9, "max": 10.9, "default": 10.9 },
+    { "name": "Канцелярские товары", "min": 10.9, "max": 10.9, "default": 10.9 },
+    { "name": "Компьютеры", "min": 10.9, "max": 10.9, "default": 10.9 },
+    { "name": "Красота и здоровье", "min": 10.9, "max": 10.9, "default": 10.9 },
+    { "name": "Мебель", "min": 10.9, "max": 10.9, "default": 10.9 },
+    { "name": "Обувь", "min": 10.9, "max": 10.9, "default": 10.9 },
+    { "name": "Одежда", "min": 10.9, "max": 10.9, "default": 10.9 },
+    { "name": "Подарки, товары для праздников", "min": 10.9, "max": 10.9, "default": 10.9 },
+    { "name": "Продукты питания", "min": 6.4, "max": 6.4, "default": 6.4 },
+    { "name": "Спорт, туризм", "min": 10.9, "max": 10.9, "default": 10.9 },
+    { "name": "Строительство, ремонт", "min": 10.9, "max": 10.9, "default": 10.9 },
+    { "name": "ТВ, Аудио, Видео", "min": 10.9, "max": 13.5, "default": 13.5 },
+    { "name": "Телефоны и гаджеты", "min": 10.9, "max": 13.5, "default": 13.5 },
+    { "name": "Товары для дома и дачи", "min": 10.9, "max": 10.9, "default": 10.9 },
+    { "name": "Товары для животных", "min": 6.4, "max": 10.9, "default": 10.9 },
+    { "name": "Украшения", "min": 13.5, "max": 13.5, "default": 13.5 }
+  ]
+}

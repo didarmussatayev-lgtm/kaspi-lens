@@ -1,0 +1,16 @@
+{
+  "intervalSeconds": 5,
+  "banners": [
+    {
+      "enabled": true,
+      "tag": "Реклама",
+      "title": "Здесь может быть ваша реклама",
+      "description": "Разместите вашу рекламу на 1000+ селлеров Kaspi",
+      "url": "https://t.me/digitalcraftzman",
+      "theme": {
+        "from": "#141414",
+        "to": "#606060"
+      }
+    }
+  ]
+}
