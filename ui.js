@@ -7,7 +7,7 @@ KSL.ICON_CALC =
 
 KSL.ICON_MERCHANT =
   '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-  '<path d="M4 10.5h16l-1.2-5.2A1.7 1.7 0 0 0 17.2 4H6.8a1.7 1.7 0 0 0-1.6 1.3L4 10.5Z"/><path d="M5 10.5V20h14v-9.5M8 20v-5h8v5M4 10.5c.5 1.3 2.7 1.3 3.2 0 .5 1.3 2.7 1.3 3.2 0 .5 1.3 2.7 1.3 3.2 0 .5 1.3 2.7 1.3 3.2 0 .5 1.3 2.7 1.3 3.2 0"/></svg>';
+  '<path d="M4 10.5h16l-1.2-5.2A1.7 1.7 0 0 0 17.2 4H6.8a1.7 1.7 0 0 0-1.6 1.3L4 10.5Z"/><path d="M5 10.5V20h14v-9.5M8 20v-5h8v5M4 10.5c.5 1.3 2.7 1.3 3.2 0 .5 1.3 2.7 1.3 3.2 0 .5 1.3 2.7 1.3 3.2 0 .5 1.3 2.7 1.3 3.2 0"/></svg>';
 
 KSL.ICON_INVOICES =
   '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
@@ -80,7 +80,7 @@ KSL.buildPanelHtml = function (merchantId) {
     '<div class="metric-value" id="revenue">—</div></div>' +
     '<div class="profit-strip"><div class="metric-tip" data-i18n-tooltip="netProfitTip"><span data-i18n="netProfit">Доход после налогов</span><strong class="metric-positive" id="netProfitTotal">—</strong></div>' +
     '<div class="metric-tip" data-i18n-tooltip="profitPerUnitTip"><span data-i18n="profitPerUnit">Доход / 1 шт</span><strong class="metric-positive" id="profitPerUnit">—</strong></div>' +
-    '<div class="metric-tip" data-i18n-tooltip="totalFeesTip"><span data-i18n="totalFees">Все расходы + налоги</span><strong class="metric-negative" id="totalFees">—</strong><small id="feesPerUnitWrap"><span data-i18n="feesPerUnit">Расход / 1 шт</span> <b class="metric-negative" id="feesPerUnit">—</b></small></div></div></div>' +
+    '<div class="metric-tip" data-i18n-tooltip="totalFeesTip"><span data-i18n="totalFees">Все расходы + налоги</span><strong class="metric-negative" id="totalFees">—</strong><small id="totalFeesPercent"></small></div></div></div>' +
     '<div class="card product-card" id="productCard" role="button" tabindex="0" data-i18n-aria="copyProductLink">' +
     '<div class="product-summary"><div class="product-thumb" id="productThumb" role="button" tabindex="0" data-i18n-aria="viewProductPhoto"></div><div class="product-info">' +
     '<div class="product-title" id="productTitle">—</div>' +
@@ -154,22 +154,22 @@ KSL.buildPanelHtml = function (merchantId) {
     '<span class="selector-count" id="selectorCount">0 из 6</span></div>' +
     '<p class="selector-intro" id="selectorIntro" data-i18n="selectorsIntro">Выберите данные товара на странице Kaspi.</p>' +
     '<button type="button" class="btn selector-start-btn" id="selectorStartBtn" data-key="title" data-i18n="selectorsStart">Начать настройку</button>' +
-    '<div class="selector-item" data-selector-item="title"><div class="setting-row"><span data-i18n="title">Название товара</span><button class="pick-btn" data-key="title" data-i18n-aria="pick"><span class="pick-label" data-i18n="pick">Выбрать</span><span class="pick-icon">' + KSL.ICON_PICK + '</span></button></div>' +
+    '<div class="selector-item" data-selector-item="title"><div class="setting-row"><span data-i18n="title">Название товара</span><button class="pick-btn" data-key="title" data-i18n-aria="pick"><span>' + KSL.ICON_PICK + '</span></button></div>' +
     '<div class="selector-help" data-i18n="titleHelp">Нажмите на название товара.</div>' +
     '<div class="selector-status is-pick" data-status="title">Нужно выбрать</div></div>' +
-    '<div class="selector-item" data-selector-item="image"><div class="setting-row"><span data-i18n="image">Фото карточки</span><button class="pick-btn" data-key="image" data-i18n-aria="pick"><span class="pick-label" data-i18n="pick">Выбрать</span><span class="pick-icon">' + KSL.ICON_PICK + '</span></button></div>' +
+    '<div class="selector-item" data-selector-item="image"><div class="setting-row"><span data-i18n="image">Фото карточки</span><button class="pick-btn" data-key="image" data-i18n-aria="pick"><span>' + KSL.ICON_PICK + '</span></button></div>' +
     '<div class="selector-help" data-i18n="imageHelp">Нажмите на главное фото.</div>' +
     '<div class="selector-status is-pick" data-status="image">Нужно выбрать</div></div>' +
-    '<div class="selector-item" data-selector-item="category"><div class="setting-row"><span data-i18n="category">Категория товара</span><button class="pick-btn" data-key="category" data-i18n-aria="pick"><span class="pick-label" data-i18n="pick">Выбрать</span><span class="pick-icon">' + KSL.ICON_PICK + '</span></button></div>' +
+    '<div class="selector-item" data-selector-item="category"><div class="setting-row"><span data-i18n="category">Категория товара</span><button class="pick-btn" data-key="category" data-i18n-aria="pick"><span>' + KSL.ICON_PICK + '</span></button></div>' +
     '<div class="selector-help" data-i18n="categoryHelp">Нужно для комиссии.</div>' +
     '<div class="selector-status is-pick" data-status="category">Нужно выбрать</div></div>' +
-    '<div class="selector-item" data-selector-item="price"><div class="setting-row"><span data-i18n="price">Цена товара</span><button class="pick-btn" data-key="price" data-i18n-aria="pick"><span class="pick-label" data-i18n="pick">Выбрать</span><span class="pick-icon">' + KSL.ICON_PICK + '</span></button></div>' +
+    '<div class="selector-item" data-selector-item="price"><div class="setting-row"><span data-i18n="price">Цена товара</span><button class="pick-btn" data-key="price" data-i18n-aria="pick"><span>' + KSL.ICON_PICK + '</span></button></div>' +
     '<div class="selector-help" data-i18n="priceHelp">Нажмите на цену товара.</div>' +
     '<div class="selector-status is-pick" data-status="price">Нужно выбрать</div></div>' +
-    '<div class="selector-item" data-selector-item="reviews"><div class="setting-row"><span data-i18n="sales">Отзывы/продажи</span><button class="pick-btn" data-key="reviews" data-i18n-aria="pick"><span class="pick-label" data-i18n="pick">Выбрать</span><span class="pick-icon">' + KSL.ICON_PICK + '</span></button></div>' +
+    '<div class="selector-item" data-selector-item="reviews"><div class="setting-row"><span data-i18n="sales">Отзывы/продажи</span><button class="pick-btn" data-key="reviews" data-i18n-aria="pick"><span>' + KSL.ICON_PICK + '</span></button></div>' +
     '<div class="selector-help" data-i18n="salesHelp">Нажмите на строку отзывов.</div>' +
     '<div class="selector-status is-pick" data-status="reviews">Нужно выбрать</div></div>' +
-    '<div class="selector-item" data-selector-item="sku"><div class="setting-row"><span data-i18n="sku">Код товара</span><button class="pick-btn" data-key="sku" data-i18n-aria="pick"><span class="pick-label" data-i18n="pick">Выбрать</span><span class="pick-icon">' + KSL.ICON_PICK + '</span></button></div>' +
+    '<div class="selector-item" data-selector-item="sku"><div class="setting-row"><span data-i18n="sku">Код товара</span><button class="pick-btn" data-key="sku" data-i18n-aria="pick"><span>' + KSL.ICON_PICK + '</span></button></div>' +
     '<div class="selector-help" data-i18n="skuHelp">Нажмите на код товара.</div>' +
     '<div class="selector-status is-pick" data-status="sku">Нужно выбрать</div></div></div>' +
     '<div class="card settings-control-card"><div class="setting-row"><span data-i18n="lang">Язык</span>' +
@@ -193,10 +193,8 @@ KSL.buildPanelHtml = function (merchantId) {
     '<div class="card support-card"><div class="card-title support-title" data-i18n="supportTitle">Kaspi Seller Lens (Unofficial)</div>' +
     '<p class="support-text" data-i18n="supportText">Нравится расширение? Можно поддержать автора.</p></div>' +
     '<div class="card support-copy-card support-contact-card" id="supportContactCard"><div class="card-title" data-i18n="supportContact">Контакты</div>' +
-    '<div class="support-copy-row"><div class="support-copy-text"><span data-i18n="supportTelegramLabel">Telegram</span><div class="support-copy-value">https://t.me/digitalcraftzman</div></div>' +
-    '<button type="button" class="support-inline-copy" id="copySupportTelegramBtn" data-copy="https://t.me/digitalcraftzman" data-i18n-aria="copySupportTelegram">' + KSL.ICON_COPY + '</button></div>' +
-    '<div class="support-copy-row"><div class="support-copy-text"><span data-i18n="supportCard">Kaspi Gold</span><div class="support-copy-value support-number" id="supportCardNumber">4400 4302 8713 3273</div></div>' +
-    '<button type="button" class="support-inline-copy" id="copySupportCardBtn" data-copy="4400430287133273" data-i18n-aria="copySupportCard">' + KSL.ICON_COPY + '</button></div></div></div>' +
+    '<div class="support-copy-row"><div class="support-copy-text"><span data-i18n="supportCard">Kaspi Gold</span><div class="support-copy-value support-number" id="supportCardNumber">4400 4303 8449 6003</div></div>' +
+    '<button type="button" class="support-inline-copy" id="copySupportCardBtn" data-copy="4400430384496003" data-i18n-aria="copySupportCard">' + KSL.ICON_COPY + '</button></div></div></div>' +
     '<div class="ksl-nav">' +
     merchantNav +
     calculatorNav +
